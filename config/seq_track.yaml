@@ -1,0 +1,78 @@
+
+# Based on the original openptv .par files, with the necessary changes.
+# all directories relative to example/
+tracking:
+    velocity_lims: [[-0.6, 0.6], [-0.6, 0.6], [-0.6, 0.6]]
+    angle_lim: 60
+    accel_lim: 0.05
+    add_particle: 1
+    
+    # This uses non-traditional file naming just to show that it's possible.
+    # If you plan to use your results with OpenPTV-Python or similar, remember
+    # to rename these rt_is, ptv_is, added respectively.
+    corres_prefix: data/seqtrack_res/particles
+    linkage_prefix: data/seqtrack_res/linkage
+    prio_prefix: data/seqtrack_res/added
+
+cameras:
+  - image: data/cal/cam1.tif
+    ori_file: config/cal/cam1.tif.ori
+    addpar_file: config/cal/cam1.tif.addpar
+
+  - image: data/cal/cam2.tif
+    ori_file: config/cal/cam2.tif.ori
+    addpar_file: config/cal/cam2.tif.addpar
+
+  - image: data/cal/cam3.tif
+    ori_file: config/cal/cam3.tif.ori
+    addpar_file: config/cal/cam3.tif.addpar
+
+  - image: data/cal/cam4.tif
+    ori_file: config/cal/cam4.tif.ori
+    addpar_file: config/cal/cam4.tif.addpar
+
+# This applies to tracers.
+detection:
+    discont: 30
+    gvthresh: [15, 12, 12, 15]
+    pixel_count_bounds: [12, 1000]
+    xsize_bounds: [3, 40]
+    ysize_bounds: [3, 40]
+    min_sum_grey: 100
+    cross_size: 2
+    
+scene:
+    flags: hp, headers
+    image_size: [ 1280, 1024 ]
+    pixel_size: [ 0.012, 0.012 ]
+    
+    # Multimedia parameters:
+    cam_side_n: 1  # air
+    object_side_n: 1.33  # water
+    wall_ns: [ 1.46 ] # perspex
+    wall_thicks: [ 6.18 ]
+
+correspondences:
+    x_span: [-20., 20.]
+    z_spans:
+        - [-88., -52.]
+        - [-88., -52.]
+    
+    pixels_x: 0.02
+    pixels_y: 0.02
+    pixels_tot: 0.02
+    
+    ref_gray: 0.02
+    min_correlation: 10
+    # I'm setting it pretty loose in this example because
+    # the calibration is not perfect.
+    epipolar_band: 0.9   # mm on sensor plane.
+    
+sequence:
+    template: data/seqtrack/cam{cam:1d}.{frame:04d}
+    targets_template: data/seqtrack_targs/cam{cam:1d}.
+    output_template: data/seqtrack_res/particles.{frame:d}
+    first: 2500
+    last: 2700
+    radius: 15  # this is for the inertials.
+    threshold: 0.1
