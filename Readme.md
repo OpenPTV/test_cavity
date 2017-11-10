@@ -3,11 +3,20 @@
 This is a set of data measured using 3D-PTV method and kept in a working folder suitable
 for the OpenPTV software (www.openptv.net)
 
+## This particular branch is for the PBI 
+
+PBI is the "Particle Bureau of Investigation" - a new Python package that uses the 
+OpenPTV library (`liboptv`), see  <https://github.com/yosefm/pbi> 
+
+It uses YAML type of parameter files instead of .par files
+used in Tcl/Tk and OpenPTV-Python versions, originated from the ETH Zurich code. This 
+branch shall have both .par and YAML files compatible with PBI
+
 ## How to use it
 
     git clone https://github.com/openptv/test_cavity
-    python pyptv_gui.py test_cavity
-    
+
+Read PBI Readme for the next steps.     
 
 ## Source of this data and credits
 
