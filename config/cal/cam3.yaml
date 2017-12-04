@@ -1,0 +1,22 @@
+
+target:
+    image: data/cal/cam3.tif 
+    number: 2
+    ori_file: config/cal/cam3.tif.ori
+    addpar_file: config/cal/cam3.tif.addpar
+    known_points: config/cal/points3.txt
+    manual_detection_points: [ 20, 24, 26, 30 ]
+    manual_detection_file: config/cal/cam3_man.txt
+    glass_vec: [ 0., 0., 118. ]
+
+scene:
+    flags: hp, headers
+    image_size: [ 1280, 1024 ]
+    pixel_size: [ 0.014, 0.014 ]
+    
+    # Multimedia parameters:
+    cam_side_n: 1  # air
+    object_side_n: 1.335  # water
+    wall_ns: [ 1.43 ] # perspex
+    wall_thicks: [ 5 ]
+

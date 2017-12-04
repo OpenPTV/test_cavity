@@ -1,22 +1,33 @@
 
 target:
-    image: data/cal/cam2.tif 
+    image: cam2.tif 
     number: 1
-    ori_file: config/cal/cam2.tif.ori
-    addpar_file: config/cal/cam2.tif.addpar
-    known_points: config/cal/points2.txt
-    manual_detection_points: [ 25, 29, 31, 35 ]
-    manual_detection_file: config/cal/cam2_man.txt
-    glass_vec: [ 0., 0., 118. ]
+    ori_file: cam2.tif.ori
+    addpar_file: cam2.tif.addpar
+    known_points: points2.txt
+    manual_detection_points: [ 1, 3, 42, 43 ]
+    manual_detection_file: cam2_man.txt
+    glass_vec: [ 0., 0., -125. ]
 
 scene:
     flags: hp, headers
     image_size: [ 1280, 1024 ]
-    pixel_size: [ 0.014, 0.014 ]
+    pixel_size: [ 0.012, 0.012 ]
     
     # Multimedia parameters:
     cam_side_n: 1  # air
     object_side_n: 1.335  # water
-    wall_ns: [ 1.43 ] # perspex
-    wall_thicks: [ 5 ]
+    wall_ns: [ 1.46 ] # perspex
+    wall_thicks: [ 6.0 ]
+
+detection:
+    discont: 400
+    gvthresh: [5, 5, 5, 5]
+    pixel_count_bounds: [20, 2000]
+    xsize_bounds: [5, 200]
+    ysize_bounds: [5, 200]
+    min_sum_grey: 200
+    cross_size: 3
+    
+default_free_vars: [ cc ]
 

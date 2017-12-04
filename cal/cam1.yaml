@@ -4,10 +4,10 @@ target:
     number: 0
     ori_file: cam1.tif.ori
     addpar_file: cam1.tif.addpar
-    known_points: target_on_a_side.txt
-    manual_detection_points: [ 3, 5, 72, 73 ]
+    known_points: points1a.txt
+    manual_detection_points: [ 1, 3, 43, 44 ]
     manual_detection_file: cam1_man.txt
-    glass_vec: [ 0., 0., 118. ]
+    glass_vec: [ 0., 0., -125. ]
 
 scene:
     flags: hp, headers
@@ -22,10 +22,10 @@ scene:
 
 detection:
     discont: 400
-    gvthresh: [10, 10, 10, 10]
-    pixel_count_bounds: [100, 2000]
-    xsize_bounds: [10, 100]
-    ysize_bounds: [10, 100]
+    gvthresh: [5, 5, 5, 5]
+    pixel_count_bounds: [20, 2000]
+    xsize_bounds: [5, 200]
+    ysize_bounds: [5, 200]
     min_sum_grey: 200
     cross_size: 3
     
