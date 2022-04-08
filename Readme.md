@@ -12,7 +12,7 @@ for the OpenPTV software (www.openptv.net)
 ## Source of this data and credits
 
 This set of data is recorded at the Alex Liberzon laboratory at the School of Mechanical 
-Engineering, Tel Aviv University, http://alex-lab.github.io by the team of Reut Elfassi, 
+Engineering, Tel Aviv University, http://turbulencelab.sites.tau.ac.il by the team of Reut Elfassi, 
 David Ratner and Mark Kreizer (all Master students at that time) 
 
 The setup is a lid-driven cavity in a cubic cavity of a 1:1:1 ratio. The top lid is a 
