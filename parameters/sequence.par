@@ -1,6 +1,6 @@
-img_2/cam1_%d.tif
-img_2/cam2_%d.tif
-img_2/cam3_%d.tif
-img_2/cam4_%d.tif
-10001
-10004
+img_3/cam1.%d
+img_3/cam2.%d
+img_3/cam3.%d
+img_3/cam4.%d
+0
+4
