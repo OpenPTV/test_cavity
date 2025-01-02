@@ -23,6 +23,20 @@ The 4 cameras are located on two sides of the cavity (positive and negative 'z')
 details are available from the Reut Elfassi (Kramer) thesis. 
 
 
+## Working with plugins
+
+Plugins is a system of extensions to PyPTV without the need to change the GUI
+
+1. copy the `sequence_plugins.txt` and `tracking_plugins.txt` to the working folder
+2. copy the `plugins/` directory to the working folder
+3. modify the code in various plugins so it performs instead of the default sequence or default tracker
+4. Open the GUI and Plugins -> Choose , then run the rest: Init -> Sequence 
+
+
+Note, the specific branch `plugin_remback` requires installation of the `pip install rembg[cpu]` or `pip install rembg[gpu]`
+
+
+
 ## License
 
 `BY-SA` – [Attribution-ShareAlike](https://github.com/idleberg/Creative-Commons-Markdown/blob/master/4.0/by-sa.markdown)
