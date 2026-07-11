@@ -2,8 +2,11 @@ num_cams: 4
 plugins:
   available_tracking:
   - default
+  - ext_tracker_denis
   available_sequence:
   - default
+  - ext_sequence_denis
+  - ext_sequence_rembg
   selected_tracking: default
   selected_sequence: default
 cal_ori:
@@ -59,27 +62,26 @@ dumbbell:
   dumbbell_penalty_weight: 1.0
   dumbbell_scale: 25.0
   dumbbell_step: 1
-  dumbbell_fixed_camera: 0
 examine:
   Combine_Flag: false
   Examine_Flag: false
 man_ori:
   nr:
+  - 2
   - 3
+  - 71
   - 73
   - 2
-  - 71
   - 3
-  - 73
-  - 2
   - 71
-  - 1
-  - 69
-  - 3
   - 73
   - 1
-  - 69
   - 3
+  - 69
+  - 73
+  - 1
+  - 3
+  - 69
   - 73
 multi_planes:
   n_planes: 3
@@ -98,8 +100,8 @@ orient:
   pnfo: 0
   scale: 0
   shear: 0
-  xh: 1
-  yh: 1
+  xh: 0
+  yh: 0
 pft_version:
   Existing_Target: 0
 ptv:
@@ -166,7 +168,60 @@ track:
   dvzmax: 15.5
   dvzmin: -15.5
   flagNewParticles: true
-  track_mode: 1
+  track_mode: 0
+man_ori_coordinates:
+  camera_0:
+    point_1:
+      x: 1009.0
+      y: 608.0
+    point_2:
+      x: 979.0
+      y: 335.0
+    point_3:
+      x: 246.0
+      y: 620.0
+    point_4:
+      x: 235.0
+      y: 344.0
+  camera_1:
+    point_1:
+      x: 1002.0
+      y: 609.0
+    point_2:
+      x: 1013.0
+      y: 335.0
+    point_3:
+      x: 261.0
+      y: 620.0
+    point_4:
+      x: 285.0
+      y: 355.0
+  camera_2:
+    point_1:
+      x: 245.0
+      y: 926.0
+    point_2:
+      x: 236.0
+      y: 395.0
+    point_3:
+      x: 967.0
+      y: 892.0
+    point_4:
+      x: 970.0
+      y: 382.0
+  camera_3:
+    point_1:
+      x: 262.0
+      y: 823.0
+    point_2:
+      x: 251.0
+      y: 300.0
+    point_3:
+      x: 989.0
+      y: 837.0
+    point_4:
+      x: 988.0
+      y: 299.0
 masking:
   mask_flag: false
   mask_base_name: ''
@@ -174,56 +229,3 @@ unsharp_mask:
   flag: false
   size: 3
   strength: 1.0
-man_ori_coordinates:
-  camera_0:
-    point_1:
-      x: 983.0
-      y: 337.0
-    point_2:
-      x: 231.0
-      y: 345.0
-    point_3:
-      x: 1010.0
-      y: 606.0
-    point_4:
-      x: 251.0
-      y: 623.0
-  camera_1:
-    point_1:
-      x: 1011.0
-      y: 333.0
-    point_2:
-      x: 288.0
-      y: 356.0
-    point_3:
-      x: 999.0
-      y: 611.0
-    point_4:
-      x: 264.0
-      y: 623.0
-  camera_2:
-    point_1:
-      x: 246.0
-      y: 931.0
-    point_2:
-      x: 970.0
-      y: 900.0
-    point_3:
-      x: 231.0
-      y: 388.0
-    point_4:
-      x: 970.0
-      y: 381.0
-  camera_3:
-    point_1:
-      x: 261.0
-      y: 823.0
-    point_2:
-      x: 995.0
-      y: 834.0
-    point_3:
-      x: 252.0
-      y: 298.0
-    point_4:
-      x: 986.0
-      y: 298.0

@@ -1,4 +1,14 @@
 num_cams: 4
+plugins:
+  available_tracking:
+  - default
+  - ext_tracker_denis
+  available_sequence:
+  - default
+  - ext_sequence_denis
+  - ext_sequence_rembg
+  selected_tracking: default
+  selected_sequence: default
 cal_ori:
   chfield: 0
   fixp_name: cal/target_on_a_side.txt
@@ -17,14 +27,14 @@ cal_ori:
   cal_splitter: false
 criteria:
   X_lay:
-  - -40.0
-  - 40.0
+  - -40
+  - 40
   Zmax_lay:
-  - 20.0
-  - 20.0
+  - 20
+  - 20
   Zmin_lay:
-  - -20.0
-  - -20.0
+  - -20
+  - -20
   cn: 0.02
   cnx: 0.02
   cny: 0.02
@@ -52,6 +62,7 @@ dumbbell:
   dumbbell_penalty_weight: 1.0
   dumbbell_scale: 25.0
   dumbbell_step: 1
+  dumbbell_fixed_camera: 0
 examine:
   Combine_Flag: false
   Examine_Flag: false
@@ -93,7 +104,7 @@ orient:
   xh: 0
   yh: 0
 pft_version:
-  Existing_Target: false
+  Existing_Target: 0
 ptv:
   allcam_flag: false
   chfield: 0
@@ -104,10 +115,10 @@ ptv:
   - cal/cam3.tif
   - cal/cam4.tif
   img_name:
-  - img_1/cam1.10002
-  - img_1/cam2.10002
-  - img_1/cam3.10002
-  - img_1/cam4.10002
+  - img_3/cam1.0
+  - img_3/cam2.0
+  - img_3/cam3.0
+  - img_3/cam4.0
   imx: 1280
   imy: 1024
   mmp_d: 6.0
@@ -120,12 +131,12 @@ ptv:
   splitter: false
 sequence:
   base_name:
-  - img_1/cam1.%d
-  - img_1/cam2.%d
-  - img_1/cam3.%d
-  - img_1/cam4.%d
-  first: 10000
-  last: 10004
+  - img_3/cam1.%d
+  - img_3/cam2.%d
+  - img_3/cam3.%d
+  - img_3/cam4.%d
+  first: 0
+  last: 4
 shaking:
   shaking_first_frame: 10000
   shaking_last_frame: 10004
@@ -158,20 +169,7 @@ track:
   dvzmax: 15.5
   dvzmin: -15.5
   flagNewParticles: true
-masking:
-  mask_flag: false
-  mask_base_name: ''
-unsharp_mask:
-  flag: false
-  size: 3
-  strength: 1.0
-plugins:
-  available_tracking:
-  - default
-  available_sequence:
-  - default
-  selected_tracking: default
-  selected_sequence: default
+  track_mode: 0
 man_ori_coordinates:
   camera_0:
     point_1:
@@ -225,3 +223,10 @@ man_ori_coordinates:
     point_4:
       x: 988.0
       y: 299.0
+masking:
+  mask_flag: false
+  mask_base_name: ''
+unsharp_mask:
+  flag: false
+  size: 3
+  strength: 1.0
