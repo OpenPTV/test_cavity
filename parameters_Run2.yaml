@@ -27,14 +27,14 @@ cal_ori:
   cal_splitter: false
 criteria:
   X_lay:
-  - -40
-  - 40
+  - -40.0
+  - 40.0
   Zmax_lay:
-  - 20
-  - 20
+  - 20.0
+  - 20.0
   Zmin_lay:
-  - -20
-  - -20
+  - -20.0
+  - -20.0
   cn: 0.02
   cnx: 0.02
   cny: 0.02
@@ -128,6 +128,9 @@ ptv:
   pix_y: 0.012
   tiff_flag: true
   splitter: false
+  negative: false
+  parallel_preprocess: false
+  num_workers: 0
 sequence:
   base_name:
   - img_2/cam1_%d.tif
