@@ -172,7 +172,7 @@ track:
   dvzmax: 15.5
   dvzmin: -15.5
   flagNewParticles: true
-  track_mode: 0
+  track_mode: 1
 man_ori_coordinates:
   camera_0:
     point_1:
