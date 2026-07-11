@@ -2,8 +2,16 @@ num_cams: 4
 cal_ori:
   chfield: 0
   fixp_name: cal/target_on_a_side.txt
-  img_cal_name: []
-  img_ori: []
+  img_cal_name:
+  - cal/cam1.tif
+  - cal/cam2.tif
+  - cal/cam3.tif
+  - cal/cam4.tif
+  img_ori:
+  - cal/cam1.tif.ori
+  - cal/cam2.tif.ori
+  - cal/cam3.tif.ori
+  - cal/cam4.tif.ori
   pair_flag: false
   tiff_flag: true
   cal_splitter: false
