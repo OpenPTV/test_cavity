@@ -120,8 +120,8 @@ ptv:
   imy: 1024
   mmp_d: 6.0
   mmp_n1: 1.0
-  mmp_n2: 1.33
-  mmp_n3: 1.46
+  mmp_n2: 1.46
+  mmp_n3: 1.33
   pix_x: 0.012
   pix_y: 0.012
   tiff_flag: true
